@@ -52,6 +52,14 @@ namespace MethodsPractice
             
             Console.WriteLine("Your monthly wage is {0}.", WageCalculator(hoursWorked, hourlyWage));
 
+            double myHeight = 6.25d;
+            double myWeight = 225d;
+            Console.WriteLine("Your body fat percentage is {0}%.", BodyMassIndex(myHeight, myWeight));
+
+            double myShotsTaken = 18492d;
+                double myShotsMade = 9203d;
+            Console.WriteLine("Your field goal percentage is {0}%.", FieldGoalPercentage(myShotsTaken, myShotsMade));
+
         }
         //Method header
         //Access Modifier - Return Type - Method Name (in Pascal Case) - Parentheses (sometimes with parameters)
@@ -115,6 +123,27 @@ namespace MethodsPractice
             //This method should calculate the MONTHLY wage
             double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage) / 12;
             return monthlyWage;
+        }
+
+
+
+
+        //Create two methods of your choosing. At least one of the methods should have a non-void return type.
+        //Both of the methods should take at least one parameter.
+        //Remember when naming your method that it should represent what your method does.
+        //Your method should only aim to accomplish one thing.
+        //Be creative.
+
+        public static double BodyMassIndex(double height, double weight)
+        {
+            double bodyFat = (height * weight) *.05;
+            return bodyFat;
+        }
+
+        public static double FieldGoalPercentage(double shotsTaken, double shotsMade)
+        {
+            double fgPer = (shotsMade / shotsTaken);
+            return fgPer;
         }
 
     }
